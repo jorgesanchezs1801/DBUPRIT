@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASE DE DATOS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/estilosin.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-btn">Inicio</a>
+            <a href="https://supabase.com/dashboard/project/yfkbnivdmpocqbhusjai/database/schemas" target="_blank"
+                class="nav-btn">PosgreSQL</a>
+        </div>
+    </nav>
+
+    <section class="caratula">
+        <div class="portada">
+            <img src="logoUPRIT.png" alt="Logo UPRIT" class="logo">
+            <h1>UNIVERSIDAD PRIVADA DE TRUJILLO</h1>
+            <h2>FACULTAD DE EDUCACION</h2>
+            <h3>BASES DE DATOS</h3>
+            <p>Grupo 2</p>
+
+            <div class="integrantes">
+                <h3>Integrantes</h3>
+                <ul>
+                    <li>SANCHEZ SANCHEZ, JORGE</li>
+                    <li>LOPEZ VEGA, ELIDA LUHANA</li>
+                    <li>BANCES GONZALEZ, HUBELCER JOEL</li>
+                    <li>RENGIFO REATEGUI, JANETH NATALIA</li>
+                    <li>RODRIGUEZ MONTALVO, RICARDO ANTONIO</li>
+
+                </ul>
+            </div>
+
+            <div class="integrantes">
+                <h3>PROFESOR</h3>
+                <ul>
+                    <li>Mag. ENRIQUE MEDINA URBINA</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Universidad Privada de Trujillo | Grupo 2 | DIVERSIDAD E INCLUSIÓN SOCIAL
+    </footer>
+
+    <script>
+        for (let i = 0; i < 50; i++) {
+            let p = document.createElement("div");
+            p.classList.add("particle");
+            p.style.left = Math.random() * 100 + "%";
+            p.style.animationDuration = (10 + Math.random() * 20) + "s";
+            document.body.appendChild(p);
+        }
+    </script>
+</body>
+
+</html>

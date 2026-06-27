@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    overflow-x: hidden;
+    padding-top: 80px; /* Espacio para que la barra fija no tape el contenido superior */
+}
+
+/*======================
+PARTICULAS DE FONDO
+======================*/
+
+.particle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: .3;
+    animation: float 15s linear infinite;
+    z-index: 1;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+/*======================
+BARRA DE NAVEGACIÓN (NUEVO)
+======================*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(15, 23, 42, 0.75); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(12px); /* Efecto de desenfoque */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000; /* Asegura que siempre esté por encima de todo */
+}
+
+.nav-container {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: .3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+.nav-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+/*======================
+PORTADA
+======================*/
+
+.caratula {
+    min-height: calc(100vh - 80px); /* Ajustado para compensar el navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(rgba(15,23,42,.9), rgba(15,23,42,.9)), url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+}
+
+.portada {
+    max-width: 1000px;
+    color: white;
+}
+
+.logo {
+    width: 180px;
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255,255,255,.3);
+    margin-bottom: 20px;
+}
+
+.portada h1 {
+    font-size: 3rem;
+    color: oklab(48.826% 0.17012 0.09227 / 0.836);
+}
+
+.portada h2 {
+    color: #fbbf24;
+    margin: 15px 0;
+}
+
+.portada h3 {
+    margin: 15px 0;
+}
+
+.integrantes {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.integrantes h3 {
+    color: #fbbf24;
+}
+
+.integrantes ul {
+    list-style: none;
+}
+
+.integrantes li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    border-radius: 40px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .4s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-5px);
+}
+
+/*======================
+MAPA
+======================*/
+
+#mapa {
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.titulo {
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.titulo h1 {
+    font-size: 3rem;
+}
+
+.central {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.concepto {
+    width: 450px;
+    padding: 30px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,.4);
+}
+
+.concepto img {
+    width: 100px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    border-radius: 25px;
+    padding: 25px;
+    color: white;
+    transition: .4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 70px;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.arq {
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+}
+
+.tipo {
+    background: linear-gradient(135deg, #16a34a, #4ade80);
+}
+
+.ven {
+    background: linear-gradient(135deg, #0891b2, #22d3ee);
+}
+
+.des {
+    background: linear-gradient(135deg, #dc2626, #f87171);
+}
+
+footer {
+    background: #020617;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+@media(max-width:768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-container {
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+
+    .portada h1 {
+        font-size: 2rem;
+    }
+
+    .titulo h1 {
+        font-size: 2rem;
+    }
+
+    .concepto {
+        width: 100%;
+    }
+}

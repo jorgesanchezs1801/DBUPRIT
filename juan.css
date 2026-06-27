@@ -1,0 +1,323 @@
+/* -----------------------------------------------------------
+   Estilos premium – Caso Juan (movilidad)
+   Inspirado en Caso.html, con colores más cálidos y contraste
+   ----------------------------------------------------------- */
+
+/* Fuente global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f4ff, #e1e8ff);
+    color: #2d2d2d;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tema oscuro / claro */
+:root {
+    --bg-primary: #f0f4ff;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --bg-card-dark: rgba(30, 30, 42, 0.85);
+    --text-primary: #1e1e2a;
+    --accent: #4a90e2;
+    --badge-bg: #ffefc5;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #1e1e2a;
+    --bg-card: var(--bg-card-dark);
+    --text-primary: #e4e4e7;
+    --accent: #7dafff;
+    --badge-bg: #433d3d;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--bg-card);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.nav-btn {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* Contenedor principal */
+.container {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Cabecera */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--badge-bg);
+    color: #8a6d3b;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin: 0.6rem 0;
+    background: linear-gradient(45deg, var(--accent), #517fe5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lead-text {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* Imagen de cabecera */
+.header-image-container {
+    margin-top: 1.5rem;
+    perspective: 800px;
+}
+
+.header-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transform: rotateX(10deg);
+    transition: transform 0.4s;
+}
+
+.header-image:hover {
+    transform: rotateX(0deg) scale(1.02);
+}
+
+/* Pestañas */
+.tabs-container {
+    margin-bottom: 2rem;
+}
+
+.tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+}
+
+.tab-btn {
+    background: var(--bg-card);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+.tab-btn-debate {
+    background: #ffdd57;
+    color: #5a4f00;
+}
+
+.tab-btn-debate.active,
+.tab-btn-debate:hover {
+    background: #ffb400;
+    color: #fff;
+}
+
+/* Contenido de pestaña */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Tarjetas */
+.card {
+    background: var(--bg-card);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-intro {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+/* Bloques de ley */
+.law-block {
+    background: rgba(255, 255, 255, 0.6);
+    border-left: 4px solid var(--accent);
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
+}
+
+.tag-norma {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.law-block h3 {
+    margin: 0.3rem 0;
+    color: var(--text-primary);
+}
+
+.law-block p {
+    margin: 0.2rem 0;
+}
+
+/* Análisis & debate */
+.analysis-box,
+.debate-highlight {
+    background: rgba(255, 255, 200, 0.7);
+    border-left: 5px solid #ffb400;
+    padding: 0.8rem 1rem;
+    margin: 1rem 0;
+    border-radius: 0.4rem;
+}
+
+.analysis-box i,
+.debate-highlight i {
+    color: #d9534f;
+    margin-right: 0.4rem;
+}
+
+/* Grid de leyes */
+.grid-laws {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.grid-laws .law-block {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 280px;
+}
+
+/* Conceptos */
+.concept-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+}
+
+.concept-item strong {
+    color: var(--accent);
+}
+
+/* Botones flotantes */
+.fab-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.fab-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.3s;
+}
+
+.fab-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-card);
+    font-size: 0.9rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .grid-laws .law-block {
+        flex-basis: 100%;
+    }
+
+    .header-image {
+        transform: none;
+    }
+}
